@@ -4,10 +4,10 @@ import {
     SearchbarStyle,
     SearchForm,
     Button,
-    ButtonLabel,
     Input
 } from "./Searchbar.styled";
 
+import { BsSearch } from 'react-icons/bs';
 
 export const Searchbar = ({ onSubmit }) => {
   const [queue, setQueue] = useState('');
@@ -20,27 +20,26 @@ export const Searchbar = ({ onSubmit }) => {
     e.preventDefault();
     onSubmit(queue);
   };
-    
-    return (
-        <SearchbarStyle>
-            <SearchForm onSubmit={handleSubmit}>
-                <Button type="submit">
-                    <ButtonLabel>Search</ButtonLabel>
-                </Button>
-    
-                <Input
-                    type="text"
-                    autocomplete="off"
-                    autoFocus
-                    value={queue}
-                    placeholder="Search images and photos"
-                    onChange={handleChange}
-                />
-            </SearchForm>
-        </SearchbarStyle>
-    )
+  return (
+    <SearchbarStyle>
+      <SearchForm onSubmit={handleSubmit}>
+        <Button type="submit">
+          <BsSearch />
+        </Button>
+        <Input
+          type="text"
+          name="SearchBar"
+          autoComplete="off"
+          autoFocus
+          value={queue}
+          onChange={handleChange}
+          placeholder="Search images and photos"
+        />
+      </SearchForm>
+    </SearchbarStyle>
+  );
 };
-    
+
 Searchbar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
