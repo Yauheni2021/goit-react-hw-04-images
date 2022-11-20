@@ -4,7 +4,7 @@ import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Loader } from './Loader/Loader';
 import { Button } from './Button/Button';
 import { useState, useEffect } from 'react';
-import { AppBox } from './App.styled';
+import { AppBox } from './AppBox.styled';
 import Notiflix from 'notiflix';
 
 import { Modal } from './Modal/Modal';
