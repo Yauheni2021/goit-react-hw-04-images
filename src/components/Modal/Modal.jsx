@@ -25,7 +25,7 @@ export const Modal = ({ children, onClose }) => {
 
 
   return createPortal(
-    <Overlay>
+    <Overlay onClick={onClose}>
       <ModalStyle>
         {children}
       </ModalStyle>
